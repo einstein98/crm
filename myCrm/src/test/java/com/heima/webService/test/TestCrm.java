@@ -7,7 +7,7 @@ import javax.ws.rs.core.MediaType;
 import org.apache.cxf.jaxrs.client.WebClient;
 import org.junit.Test;
 
-import com.heima.webservice.domain.Customer;
+import com.heima.crm.domain.Customer;
 
 /**
  * @author 作者 Eins98

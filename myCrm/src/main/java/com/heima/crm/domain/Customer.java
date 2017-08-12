@@ -1,4 +1,4 @@
-package com.heima.webservice.domain;
+package com.heima.crm.domain;
 // Generated 2017-8-10 19:52:50 by Hibernate Tools 3.2.2.GA
 
 import static javax.persistence.GenerationType.IDENTITY;
