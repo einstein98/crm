@@ -45,4 +45,16 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 		getHibernateTemplate().bulkUpdate("update Customer set decidedzoneId = ? where id = ?", decidedZone_id,
 				Integer.parseInt(customer_id));
 	}
+
+	@Override
+	public Customer saveCustomer(Customer customer) {
+		Integer id = (Integer) getHibernateTemplate().save(customer);
+		customer.setId(id);
+		return customer;
+	}
+
+	@Override
+	public Customer getCustomerByTelephone(String tel) {
+		return (Customer) getHibernateTemplate().find("from Customer where telephone=?", tel).get(0);
+	}
 }

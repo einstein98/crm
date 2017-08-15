@@ -18,4 +18,8 @@ public interface CustomerDao {
 
 	void setDecidedZoneToCust(String customer_id, String decidedZone_id);
 
+	Customer saveCustomer(Customer customer);
+
+	Customer getCustomerByTelephone(String tel);
+
 }

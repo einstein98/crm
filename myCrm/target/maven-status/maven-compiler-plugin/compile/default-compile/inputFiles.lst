@@ -1,5 +1,5 @@
-E:\Heima\JavaEE\Code\myCrm\src\main\java\com\heima\webservice\dao\impl\CustomerDaoImpl.java
-E:\Heima\JavaEE\Code\myCrm\src\main\java\com\heima\webservice\dao\CustomerDao.java
-E:\Heima\JavaEE\Code\myCrm\src\main\java\com\heima\webservice\domain\Customer.java
-E:\Heima\JavaEE\Code\myCrm\src\main\java\com\heima\webservice\service\impl\CustomerServiceImpl.java
-E:\Heima\JavaEE\Code\myCrm\src\main\java\com\heima\webservice\service\CustomerService.java
+E:\github\crm\myCrm\src\main\java\com\heima\crm\service\impl\CustomerServiceImpl.java
+E:\github\crm\myCrm\src\main\java\com\heima\crm\dao\impl\CustomerDaoImpl.java
+E:\github\crm\myCrm\src\main\java\com\heima\crm\service\CustomerService.java
+E:\github\crm\myCrm\src\main\java\com\heima\crm\domain\Customer.java
+E:\github\crm\myCrm\src\main\java\com\heima\crm\dao\CustomerDao.java

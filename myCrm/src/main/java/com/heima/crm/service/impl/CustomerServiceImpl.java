@@ -41,11 +41,26 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public void associateCustToDecidedZone(String customer_id, String decidedZone_id) {
-		String[] ids = customer_id.split(",");
-		for (String id : ids) {
+		if (customer_id.equals("none")) {
 			customerDao.clearDecidedZoneInCust(decidedZone_id);
+			return;
+		}
+		String[] ids = customer_id.split(", ");
+		customerDao.clearDecidedZoneInCust(decidedZone_id);
+		for (String id : ids) {
 			customerDao.setDecidedZoneToCust(id, decidedZone_id);
 		}
+	}
+
+	@Override
+	public Customer saveCustomer(Customer customer) {
+
+		return customerDao.saveCustomer(customer);
+	}
+
+	@Override
+	public Customer getCustomerByTelephone(String tel) {
+		return customerDao.getCustomerByTelephone(tel);
 	}
 
 }

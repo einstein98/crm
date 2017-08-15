@@ -18,7 +18,7 @@
 	
 	<bean name="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="packagesToScan" value="com.heima.webservice.domain"></property>
+		<property name="packagesToScan" value="com.heima.crm.domain"></property>
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
@@ -34,7 +34,7 @@
 	
 	<jaxrs:server name="customerService" address="/custServer">
 		<jaxrs:serviceBeans>
-			<bean class="com.heima.webservice.service.impl.CustomerServiceImpl"></bean>
+			<bean class="com.heima.crm.service.impl.CustomerServiceImpl"></bean>
 		</jaxrs:serviceBeans>
 		<jaxrs:inInterceptors>
 			<bean class="org.apache.cxf.interceptor.LoggingInInterceptor"></bean>

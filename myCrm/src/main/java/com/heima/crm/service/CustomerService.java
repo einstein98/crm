@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -32,4 +33,16 @@ public interface CustomerService {
 	@Consumes({ "application/json", "application/xml" })
 	public void associateCustToDecidedZone(@PathParam("cid") String customer_id,
 			@PathParam("did") String decidedZone_id);
+
+	@Path("/customer/save")
+	@POST
+	@Consumes({ "application/json", "application/xml" })
+	@Produces({ "application/json", "application/xml" })
+	public Customer saveCustomer(Customer customer);
+
+	@Path("/customer/getCustomerByTel/{tel}")
+	@GET
+	@Produces({ "application/json", "application/xml" })
+	public Customer getCustomerByTelephone(@PathParam("tel") String tel);
+
 }

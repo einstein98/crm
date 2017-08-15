@@ -21,7 +21,8 @@ public class Customer implements java.io.Serializable {
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", name=" + name + ", telephone=" + telephone + ", address=" + address
-				+ ", station=" + station + ", decidedzoneId=" + decidedzoneId + "]";
+				+ ", station=" + station + ", decidedzoneId=" + decidedzoneId + ", password=" + password + ", email="
+				+ email + "]";
 	}
 
 	private Integer id;
@@ -30,6 +31,26 @@ public class Customer implements java.io.Serializable {
 	private String address;
 	private String station;
 	private String decidedzoneId;
+	private String password;
+	private String email;
+
+	@Column(name = "PASSWORD", nullable = false)
+	public String getPassword() {
+		return password;
+	}
+
+	@Column(name = "EMAIL", nullable = false)
+	public String getEmail() {
+		return email;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public Customer() {
 	}
@@ -78,7 +99,7 @@ public class Customer implements java.io.Serializable {
 		this.telephone = telephone;
 	}
 
-	@Column(name = "ADDRESS", nullable = false)
+	@Column(name = "ADDRESS")
 	public String getAddress() {
 		return this.address;
 	}
